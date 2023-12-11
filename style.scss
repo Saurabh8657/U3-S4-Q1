@@ -1,0 +1,159 @@
+body{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bd3d72;
+    
+    p{
+        display: none;
+    }
+    .ball{
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: none;
+    }
+    .ball1{
+        background-color: greenyellow;
+    }
+    .ball2{
+        background-color: blue;
+    }
+    .ball3{
+        background-color: green;
+    }
+    .ball4{
+        background-color: yellow;
+    }
+    .ball5{
+        background-color: pink
+    }
+    .ball6{
+        background-color: rgb(228, 98, 120)
+    }
+    .ball7{
+        background-color: red;
+    }
+    .ball8{
+        background-color: orange;
+    }
+}
+
+.container:hover{
+    background-color: #7e0a3a;
+    p{
+        display: block;
+    }
+    .ball{
+        display: block;
+        transition: transform ;
+    }
+    .ball:hover{
+        transform: scale(2) ;
+    }
+    .ball1{
+        animation: slide-up 2s ease-in-out infinite ;
+    }
+    .ball2{
+        animation: slide-right 2s ease-in-out infinite ;
+    }
+    .ball3{
+        animation: slide-down 2s ease-in-out infinite ;
+    }
+    .ball4{
+        animation: slide-left 2s ease-in-out infinite ;
+    }
+    .ball5{
+        animation: slide-topright 2s ease-in-out infinite ;
+    }
+    .ball6{
+        animation: slide-bottomright 2s ease-in-out infinite ;
+    }
+    .ball7{
+        animation: slide-bottomleft 2s ease-in-out infinite ;
+    }
+    .ball8{
+        animation: slide-topleft 2s ease-in-out infinite ;
+    }
+    
+}
+.container:hover{
+    transition: background-color 1s ease-in;
+}
+
+
+@keyframes slide-up{
+    0%, 100%{
+        transform: translate(0);
+    }
+    50%{
+        transform: translateY(-150px);
+    }
+}
+@keyframes slide-right{
+    0%, 100%{
+        transform: translate(0);
+    }
+    50%{
+        transform: translateX(150px);
+    }
+}
+@keyframes slide-down{
+    0%, 100%{
+        transform: translate(0);
+    }
+    50%{
+        transform: translateY(150px);
+    }
+}
+@keyframes slide-left{
+    0%, 100%{
+        transform: translate(0);
+    }
+    50%{
+        transform: translateX(-150px);
+    }
+}
+@keyframes slide-topright{
+    0%, 100%{
+        transform: translate(0);
+    }
+    50%{
+        transform: translate(200px,-200px);
+    }
+}
+@keyframes slide-bottomright{
+    0%, 100%{
+        transform: translate(0);
+    }
+    50%{
+        transform: translate(200px,200px);
+    }
+}
+@keyframes slide-bottomleft{
+    0%, 100%{
+        transform: translate(0);
+    }
+    50%{
+        transform: translate(-200px,200px);
+    }
+}
+@keyframes slide-topleft{
+    0%, 100%{
+        transform: translate(0);
+    }
+    50%{
+        transform: translate(-200px,-200px);
+    }
+}
